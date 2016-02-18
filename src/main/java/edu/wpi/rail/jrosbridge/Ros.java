@@ -204,7 +204,17 @@ public class Ros {
 			ContainerProvider.getWebSocketContainer()
 					.connectToServer(this, uri);
 			return true;
-		} catch (DeploymentException | URISyntaxException | IOException e) {
+		} catch (DeploymentException e) {
+			// failed connection, return false
+			System.err.println("[ERROR]: Could not create WebSocket: "
+					+ e.getMessage());
+			return false;
+		} catch (URISyntaxException e) {
+			// failed connection, return false
+			System.err.println("[ERROR]: Could not create WebSocket: "
+					+ e.getMessage());
+			return false;
+		} catch (IOException e) {
 			// failed connection, return false
 			System.err.println("[ERROR]: Could not create WebSocket: "
 					+ e.getMessage());
@@ -332,7 +342,15 @@ public class Ros {
 			} else {
 				handleMessage(jsonObject);
 			}
-		} catch (NullPointerException | IOException | JsonParsingException e) {
+		} catch (NullPointerException e) {
+			// only occurs if there was an error with the JSON
+			System.err.println("[WARN]: Invalid incoming rosbridge protocol: "
+					+ message);
+		} catch (IOException e) {
+			// only occurs if there was an error with the JSON
+			System.err.println("[WARN]: Invalid incoming rosbridge protocol: "
+					+ message);
+		} catch (JsonParsingException e) {
 			// only occurs if there was an error with the JSON
 			System.err.println("[WARN]: Invalid incoming rosbridge protocol: "
 					+ message);
