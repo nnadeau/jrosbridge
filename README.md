@@ -5,17 +5,6 @@ jrosbridge [![Build Status](https://travis-ci.org/nnadeau/jrosbridge.svg?branch=
 
 ### Example Usage
 
-To include this library, use the following in your Maven configuration:
-
-```
-<dependency>
-    <groupId>edu.wpi.rail</groupId>
-    <artifactId>jrosbridge</artifactId>
-    <version>0.2.0</version>
-</dependency>
-```
-
-
 ```java
 public static void main(String[] args) throws InterruptedException {
 	Ros ros = new Ros("localhost");
