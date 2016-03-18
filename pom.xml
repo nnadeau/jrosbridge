@@ -2,17 +2,17 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>edu.wpi.rail</groupId>
+	<groupId>ca.etsmtl.coro.nn</groupId>
 	<artifactId>jrosbridge</artifactId>
-	<version>0.2.1-SNAPSHOT</version>
+	<version>0.1.0</version>
 	<packaging>jar</packaging>
 
 	<name>jrosbridge</name>
-	<url>https://github.com/rctoris/jrosbridge</url>
+	<url>https://github.com/nnadeau/jrosbridge</url>
 	<licenses>
 		<license>
 			<name>BSD License</name>
-			<url>https://raw.github.com/rctoris/jrosbridge/develop/LICENSE</url>
+			<url>https://github.com/nnadeau/jrosbridge/blob/jdk-1.6/LICENSE</url>
 			<distribution>repo</distribution>
 			<comments>The BSD 3-Clause License</comments>
 		</license>
@@ -28,13 +28,6 @@
 		<jdk.version>1.6</jdk.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
-
-	<scm>
-		<connection>scm:git:git://github.com/rctoris/jrosbridge.git</connection>
-		<developerConnection>scm:git:git@github.com:rctoris/jrosbridge.git</developerConnection>
-		<url>https://github.com/rctoris/jrosbridge</url>
-		<tag>jrosbridge-0.2.0</tag>
-	</scm>
 
 	<dependencies>
 		<dependency>
@@ -179,6 +172,6 @@
 
 	<ciManagement>
 		<system>Travis CI</system>
-		<url>https://travis-ci.org/rctoris/jrosbridge</url>
+		<url>https://travis-ci.org/nnadeau/jrosbridge</url>
 	</ciManagement>
 </project>
