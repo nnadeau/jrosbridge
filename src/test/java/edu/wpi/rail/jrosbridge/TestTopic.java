@@ -138,8 +138,7 @@ public class TestTopic {
 
 		assertNotNull(DummyHandler.latest);
 		assertEquals(
-				"{\"op\":\"subscribe\",\"id\":\"subscribe:myTopic1:0\",\"type\":\"myType1\","
-						+ "\"topic\":\"myTopic1\",\"compression\":\"none\",\"throttle_rate\":0}",
+				"{\"op\":\"unsubscribe\",\"id\":\"subscribe:myTopic1:0\",\"topic\":\"myTopic1\"}",
 				DummyHandler.latest.toString());
 
 		assertNull(cb.latest);
