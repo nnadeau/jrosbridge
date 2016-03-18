@@ -5,4 +5,4 @@ jdk:
 
 branches:
   only:
-    - develop
+    - jdk-1.6
