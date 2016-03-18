@@ -136,7 +136,15 @@ public class TestTopic {
 								+ "\":{\"test1\":\"test2\"}}").build());
 		Thread.yield();
 
-		assertNotNull(DummyHandler.latest);
+        // when running in IDE, tests seem to run quicker than Maven
+        // wait a small moment for DummyHandler to catch up
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            System.out.println(e);
+        }
+
+        assertNotNull(DummyHandler.latest);
 		assertEquals(
 				"{\"op\":\"unsubscribe\",\"id\":\"subscribe:myTopic1:0\",\"topic\":\"myTopic1\"}",
 				DummyHandler.latest.toString());
