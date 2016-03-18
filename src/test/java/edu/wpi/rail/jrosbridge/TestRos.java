@@ -89,25 +89,18 @@ public class TestRos {
 	}
 
 	@Test
-	public void testConnect() throws InterruptedException {
-		assertTrue(r1.connect());
-		assertTrue(r1.isConnected());
-		server.stop();
-		assertFalse(r1.isConnected());
-	}
-
-	@Test
-	public void testServerDisconnect() {
+	public void testConnectDisconnect() throws InterruptedException {
 		assertTrue(r1.connect());
 		assertTrue(r1.isConnected());
 		server.stop();
 
-		// stopping the server seems to not be instant, wait a small moment
-		try {
-			Thread.sleep(5);
-		} catch (InterruptedException e) {
-			System.out.println(e);
-		}
+        // stopping the server seems to not be instant, wait a small moment
+        try {
+            Thread.sleep(5);
+        } catch (InterruptedException e) {
+            System.out.println(e);
+        }
+
 		assertFalse(r1.isConnected());
 	}
 
