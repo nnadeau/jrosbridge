@@ -1,4 +1,4 @@
-jrosbridge [![Build Status](https://travis-ci.org/nnadeau/jrosbridge.svg?branch=master)](https://travis-ci.org/nnadeau/jrosbridge)
+jrosbridge [![Build Status](https://travis-ci.org/nnadeau/jrosbridge.svg?branch=jdk-1.6)](https://travis-ci.org/nnadeau/jrosbridge)
 ==========
 
 #### A Native Java EE rosbridge Client
