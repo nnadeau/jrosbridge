@@ -101,13 +101,6 @@ public class TestRos {
 		assertTrue(r1.connect());
 		assertTrue(r1.isConnected());
 		server.stop();
-
-		// stopping the server seems to not be instant, wait a small moment
-		try {
-			Thread.sleep(5);
-		} catch (InterruptedException e) {
-			System.out.println(e);
-		}
 		assertFalse(r1.isConnected());
 	}
 
