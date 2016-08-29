@@ -1,4 +1,6 @@
 jrosbridge [![Build Status](https://travis-ci.org/nnadeau/jrosbridge.svg?branch=jdk-1.6)](https://travis-ci.org/nnadeau/jrosbridge)
+[![Coverage Status](https://coveralls.io/repos/github/nnadeau/jrosbridge/badge.svg?branch=jdk-1.6)](https://coveralls.io/github/nnadeau/jrosbridge?branch=jdk-1.6)
+
 ==========
 
 #### A Native Java EE rosbridge Client
